@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # 1. Java 17 + Kafka + WireMock Agent
+  java-kafka-agent:
+    build:
+      context: ./docker/java-kafka-agent
+      dockerfile: Dockerfile
+    image: itfreesource/java-kafka-agent:17-latest
+    container_name: itfreesource-java-agent
+
+  # 2. Playwright + TypeScript Cross-Browser Agent
+  playwright-ts-agent:
+    build:
+      context: ./docker/playwright-ts-agent
+      dockerfile: Dockerfile
+    image: itfreesource/playwright-ts-agent:latest
+    container_name: itfreesource-playwright-agent
+
+  # 3. Full-Capacity Jenkins Inbound Agent
+  jenkins-inbound-agent:
+    build:
+      context: ./docker/jenkins-inbound-agent
+      dockerfile: Dockerfile
+    image: itfreesource/jenkins-inbound-agent:latest
+    container_name: itfreesource-jenkins-agent
