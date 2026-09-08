@@ -29,15 +29,9 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: actions/setup-buildx-action@v3
-
       - name: Build Agent Container (${{ matrix.agent.name }})
-        uses: docker/build-push-action@v5
-        with:
-          context: ${{ matrix.agent.context }}
-          load: true
-          tags: itfreesource/${{ matrix.agent.name }}:ci-test
+        run: |
+          docker build -t itfreesource/${{ matrix.agent.name }}:ci-test ${{ matrix.agent.context }}
 
       - name: Smoke Test Agent Tools (${{ matrix.agent.name }})
         run: |
