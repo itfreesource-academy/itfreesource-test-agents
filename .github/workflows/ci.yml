@@ -1,0 +1,44 @@
+name: Test Agents Build & Smoke Test CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-smoke-test:
+    name: Build & Smoke Test Agents
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      matrix:
+        agent:
+          - name: java-kafka-agent
+            context: ./docker/java-kafka-agent
+            test_cmd: "java -version && mvn -version"
+          - name: playwright-ts-agent
+            context: ./docker/playwright-ts-agent
+            test_cmd: "node -v && npm -v"
+          - name: jenkins-inbound-agent
+            context: ./docker/jenkins-inbound-agent
+            test_cmd: "java -version && node -v && mvn -version"
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: actions/setup-buildx-action@v3
+
+      - name: Build Agent Container (${{ matrix.agent.name }})
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.agent.context }}
+          load: true
+          tags: itfreesource/${{ matrix.agent.name }}:ci-test
+
+      - name: Smoke Test Agent Tools (${{ matrix.agent.name }})
+        run: |
+          docker run --rm itfreesource/${{ matrix.agent.name }}:ci-test bash -c "${{ matrix.agent.test_cmd }}"
