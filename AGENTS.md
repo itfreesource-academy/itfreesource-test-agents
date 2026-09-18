@@ -34,3 +34,10 @@ docker run --rm -v "${PWD}/../fintech-playwright-ts-harness:/workspace" -w /work
 ## 🎯 Key Guidelines
 - All agent images must remain hermetic and reproducible across Linux, macOS, and Windows.
 - Keep dependencies and toolchains pinned to LTS versions (Java 17, Node 20).
+
+---
+
+## 🤖 AI Agent Skills
+- **`product-manager-review`** (`skills/product-manager-review/SKILL.md`):
+  Automated Senior/Staff Product Manager review framework. Triggers on requests to review, audit, enhance, or prioritize roadmaps for software projects, developer platforms, and engineering portfolios. Evaluates Dual-Persona architecture, operational live telemetry, system design topology, DevSecOps proof-of-work, and P0/P1/P2 Value vs. Effort matrix.
+

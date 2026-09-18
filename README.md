@@ -76,6 +76,16 @@ docker run --rm -v "${PWD}/../fintech-playwright-ts-harness:/workspace" -w /work
 
 ---
 
+## 🤖 AI Agent Skills Catalog
+
+This repository also houses reusable, automated **AI Agent Skills** compatible with Antigravity, Cursor, and Claude Code:
+
+| Skill | Path | Description |
+| :--- | :--- | :--- |
+| **`product-manager-review`** | [`skills/product-manager-review/SKILL.md`](skills/product-manager-review/SKILL.md) | Senior/Staff Product Management review framework: Dual-persona audit (Operator vs. Showcase), operational live telemetry, architecture topology, DevSecOps scorecard, and P0/P1/P2 Value vs. Effort roadmap. |
+
+---
+
 ## 👤 Author
 * **Vishal Prajapati** — *Senior Associate: Test Automation & Tools Development Engineer*
 * **Portfolio:** [defendloop.io](https://defendloop.io)
