@@ -7,7 +7,7 @@
 
 A central repository containing **immutable, pre-baked containerized build agents and execution environments** for the **[ITFreeSource Academy](https://academy.itfreesource.com)** open-source ecosystem.
 
-Designed and engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Automation & Tools Development Engineer*) to ensure that anyone cloning our repositories can run tests hermetically with 100% capacity on any machine (local, VM, or Kubernetes pod) without manual environment setup.
+Designed and engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Software Engineer | Distributed Systems & DevOps*) to ensure that anyone cloning our repositories can run tests hermetically with 100% capacity on any machine (local, VM, or Kubernetes pod) without manual environment setup.
 
 ---
 
@@ -87,7 +87,7 @@ This repository also houses reusable, automated **AI Agent Skills** compatible w
 ---
 
 ## 👤 Author
-* **Vishal Prajapati** — *Senior Associate: Test Automation & Tools Development Engineer*
+* **Vishal Prajapati** — *Senior Software Engineer | Java • Spring Boot • Microservices • Distributed Systems*
 * **Portfolio:** [defendloop.io](https://defendloop.io)
 * **LinkedIn:** [linkedin.com/in/vishalprajapati2k25](https://www.linkedin.com/in/vishalprajapati2k25)
 * **Organization:** Founder of [ITFreeSource Academy](https://academy.itfreesource.com)

@@ -3,7 +3,7 @@ set -e
 
 echo "============================================================"
 echo " ITFreeSource Academy - Java 17 & Kafka Test Runner Agent"
-echo " Candidate: Vishal Prajapati (Senior SDET / Tools Engineer)"
+echo " Candidate: Vishal Prajapati (Senior Software Engineer | Distributed Systems)"
 echo "============================================================"
 java -version
 mvn -version
